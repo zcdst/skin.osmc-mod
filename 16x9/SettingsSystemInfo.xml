@@ -146,8 +146,8 @@
 				<label>20037</label>
 				<textcolor>$VAR[SystemInfoButton95]</textcolor>
 				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
+				<colorinvalid>ColorInvalid</colorinvalid>
+				<colordisabled>ColorDisabled</colordisabled>
 				<onright>SetFocus(500)</onright>
 				<onclick>SetFocus(500)</onclick>
 			</control>
@@ -159,7 +159,7 @@
 				<label>13277</label>
 				<textcolor>$VAR[SystemInfoButton94]</textcolor>
 				<focusedcolor>ColorFO</focusedcolor>
-				<colordisabled>ColorDetails</colordisabled>
+				<colordisabled>ColorDisabled</colordisabled>
 				<onright>SetFocus(500)</onright>
 				<onclick>SetFocus(500)</onclick>
 			</control>
@@ -171,8 +171,8 @@
 				<label>13279</label>
 				<textcolor>$VAR[SystemInfoButton96]</textcolor>
 				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
+				<colorinvalid>ColorInvalid</colorinvalid>
+				<colordisabled>ColorDisabled</colordisabled>
 				<onright>SetFocus(500)</onright>
 				<onclick>SetFocus(500)</onclick>
 			</control>
@@ -184,8 +184,8 @@
 				<label>13280</label>
 				<textcolor>$VAR[SystemInfoButton97]</textcolor>
 				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
+				<colorinvalid>ColorInvalid</colorinvalid>
+				<colordisabled>ColorDisabled</colordisabled>
 				<onright>SetFocus(500)</onright>
 				<onclick>SetFocus(500)</onclick>
 			</control>
@@ -197,8 +197,8 @@
 				<label>13281</label>
 				<textcolor>$VAR[SystemInfoButton98]</textcolor>
 				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
+				<colorinvalid>ColorInvalid</colorinvalid>
+				<colordisabled>ColorDisabled</colordisabled>
 				<onright>SetFocus(500)</onright>
 				<onclick>SetFocus(500)</onclick>
 			</control>
@@ -210,8 +210,8 @@
 				<label>19191</label>
 				<textcolor>$VAR[SystemInfoButton99]</textcolor>
 				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
+				<colorinvalid>ColorInvalid</colorinvalid>
+				<colordisabled>ColorDisabled</colordisabled>
 				<onright>SetFocus(500)</onright>
 				<onclick>SetFocus(500)</onclick>
 			</control>

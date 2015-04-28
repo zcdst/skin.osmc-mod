@@ -3,255 +3,139 @@
 	<!-- settings -->
 	<backgroundcolor>0</backgroundcolor>
 	<defaultcontrol>9000</defaultcontrol>
-	<onload condition="!IsEmpty(Window(settings).Property(ChangeSettingsLevel))">ClearProperty(ChangeSettingsLevel)</onload>
-
 	<controls>
-
 		<!-- Background -->
 		<include>WindowBackground</include>
-
-		<!-- Curve -->
-		<control type="image">
-			<right>20</right>
-			<top>20</top>
-			<width>1520</width>
-			<height>1040</height>
-			<texture border="40,0,0,0">common/Curve.png</texture>
-			<visible>Skin.HasSetting(ShowCurve)</visible>
-			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(8000).HasFocus + !Control.HasFocus(20)">Conditional</animation>
-		</control>
-
-		<!-- Curve -->
-		<control type="image">
-			<right>20</right>
-			<top>20</top>
-			<width>1172</width>
-			<height>1040</height>
-			<texture border="40,0,0,0">common/Curve.png</texture>
-			<visible>Skin.HasSetting(ShowCurve)</visible>
-			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(500).HasFocus">Conditional</animation>
-		</control>
-
+		<!-- Heading -->
+		<include>Heading</include>
 		<!-- Time -->
 		<include>Time</include>
-
-		<!-- List -->
-		<control type="grouplist" id="9000">
-			<left>120</left>
-			<top>240</top>
-			<width>300</width>
-			<height>870</height>
-			<itemgap>34</itemgap>
-			<onleft>Close</onleft>
-			<onup>noop</onup>
-			<ondown>noop</ondown>
-			<orientation>vertical</orientation>
-
-			<!-- Appearance -->
-			<control type="button" id="1">
-				<width>300</width>
-				<height>42</height>
-				<label>480</label>
-				<font>Large</font>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>ActivateWindow(appearancesettings)</onclick>
-				<onright>ActivateWindow(appearancesettings)</onright>
-				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
+		<!-- Main controls -->
+		<control type="group">
+			<include>WindowFadeAnimation</include>
+			<!-- Main list -->
+			<control type="list" id="9000">
+				<left>50</left>
+				<top>140</top>
+				<width>480</width>
+				<height>780</height>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<orientation>vertical</orientation>
+				<scrolltime tween="cubic" easing="out">360</scrolltime>
+				<itemlayout width="480" height="78">
+					<control type="label">
+						<left>90</left>
+						<top>0</top>
+						<width>390</width>
+						<height>78</height>
+						<font>XLarge</font>
+						<textcolor>ColorNF</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="480" height="78">
+					<control type="group">
+						<visible>Control.HasFocus(9000)</visible>
+						<control type="image">
+							<top>6</top>
+							<width>66</width>
+							<height>66</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>90</left>
+							<top>0</top>
+							<width>390</width>
+							<height>78</height>
+							<font>XLarge</font>
+							<textcolor>ColorFO</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+					<control type="group">
+						<visible>!Control.HasFocus(9000)</visible>
+						<control type="image">
+							<top>6</top>
+							<width>66</width>
+							<height>66</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>90</left>
+							<top>0</top>
+							<width>390</width>
+							<height>78</height>
+							<font>XLarge</font>
+							<textcolor>ColorSelected</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>480</label>
+						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="2">
+						<label>157</label>
+						<onclick>ActivateWindow(VideosSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="3">
+						<label>19020</label>
+						<onclick>ActivateWindow(PVRSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="4">
+						<label>2</label>
+						<onclick>ActivateWindow(MusicSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="5">
+						<label>1</label>
+						<onclick>ActivateWindow(PicturesSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="6">
+						<label>8</label>
+						<onclick>ActivateWindow(WeatherSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="7">
+						<label>24001</label>
+						<onclick>ActivateWindow(AddonBrowser)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="8">
+						<label>14036</label>
+						<onclick>ActivateWindow(ServiceSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="9">
+						<label>13000</label>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="10">
+						<label>13200</label>
+						<onclick>ActivateWindow(profiles)</onclick>
+						<icon>-</icon>
+					</item>
+				</content>
 			</control>
-			<!-- Videos -->
-			<control type="button" id="2">
-				<width>300</width>
-				<height>42</height>
-				<label>3</label>
-				<font>Large</font>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>ActivateWindow(videossettings)</onclick>
-				<onright>ActivateWindow(videossettings)</onright>
-				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
+			<!-- Next item -->
+			<control type="image">
+				<left>140</left>
+				<top>920</top>
+				<width>40</width>
+				<height>4</height>
+				<texture colordiffuse="ColorSelected">common/white.png</texture>
+				<visible>Container(9000).HasNext</visible>
 			</control>
-			<!-- Music -->
-			<control type="button" id="3">
-				<width>300</width>
-				<height>42</height>
-				<label>2</label>
-				<font>Large</font>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>ActivateWindow(musicsettings)</onclick>
-				<onright>ActivateWindow(musicsettings)</onright>
-				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-			</control>
-			<!-- Pictures -->
-			<control type="button" id="4">
-				<width>300</width>
-				<height>42</height>
-				<label>1</label>
-				<font>Large</font>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>ActivateWindow(picturessettings)</onclick>
-				<onright>ActivateWindow(picturessettings)</onright>
-				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-			</control>
-			<!-- Weather -->
-			<control type="button" id="5">
-				<width>300</width>
-				<height>42</height>
-				<label>8</label>
-				<font>Large</font>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>ActivateWindow(weathersettings)</onclick>
-				<onright>ActivateWindow(weathersettings)</onright>
-				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-			</control>
-			<!-- System -->
-			<control type="button" id="6">
-				<width>300</width>
-				<height>42</height>
-				<label>13000</label>
-				<font>Large</font>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>ActivateWindow(systemsettings)</onclick>
-				<onright>ActivateWindow(systemsettings)</onright>
-				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-			</control>
-			<!-- Service -->
-			<control type="button" id="7">
-				<width>300</width>
-				<height>42</height>
-				<label>14036</label>
-				<font>Large</font>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>ActivateWindow(servicesettings)</onclick>
-				<onright>ActivateWindow(servicesettings)</onright>
-				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-			</control>
-			<!-- PVR -->
-			<control type="button" id="8">
-				<width>300</width>
-				<height>42</height>
-				<label>31015</label>
-				<font>Large</font>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>ActivateWindow(pvrsettings)</onclick>
-				<onright>ActivateWindow(pvrsettings)</onright>
-				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-			</control>
-			<!-- System info -->
-			<control type="button" id="9">
-				<width>300</width>
-				<height>42</height>
-				<label>130</label>
-				<font>Large</font>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>ActivateWindow(systeminfo)</onclick>
-				<onright>ActivateWindow(systeminfo)</onright>
-				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-			</control>
-			<!-- More -->
-			<control type="button" id="10">
-				<width>300</width>
-				<height>42</height>
-				<label>22082</label>
-				<font>Large</font>
-				<textcolor>$VAR[MoreButtonFade]</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<onclick>SetFocus(8000)</onclick>
-				<onright>SetFocus(8000)</onright>
-			</control>
-
 		</control>
-
-		<!-- More list -->
-		<control type="grouplist" id="8000">
-			<left>480</left>
-			<top>244</top>
-			<width>1680</width>
-			<height>726</height>
-			<itemgap>34</itemgap>
-			<onleft>9000</onleft>
-			<onright>noop</onright>
-			<onup>noop</onup>
-			<ondown>noop</ondown>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(8000).HasFocus + !Control.HasFocus(20)">Conditional</animation>
-
-			<!-- Addons -->
-			<control type="button" id="8001">
-				<width>970</width>
-				<height>42</height>
-				<font>Small</font>
-				<label>24001</label>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
-				<onright>ActivateWindow(addonbrowser)</onright>
-				<onclick>ActivateWindow(addonbrowser)</onclick>
-			</control>
-			<!-- Profiles -->
-			<control type="button" id="8002">
-				<width>970</width>
-				<height>42</height>
-				<font>Small</font>
-				<label>13200</label>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
-				<onright>ActivateWindow(profiles)</onright>
-				<onclick>ActivateWindow(profiles)</onclick>
-			</control>
-			<!-- File manager -->
-			<control type="button" id="8003">
-				<width>970</width>
-				<height>42</height>
-				<font>Small</font>
-				<label>7</label>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
-				<onright>ActivateWindow(filemanager)</onright>
-				<onclick>ActivateWindow(filemanager)</onclick>
-			</control>
-			<!-- Settings level -->
-			<control type="button" id="8004">
-				<width>970</width>
-				<height>42</height>
-				<font>Small</font>
-				<label>31016</label>
-				<textcolor>ColorHeading</textcolor>
-				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
-				<onright>SetProperty(ChangeSettingsLevel,true)</onright>
-				<onright>ActivateWindow(appearancesettings)</onright>
-				<onclick>SetProperty(ChangeSettingsLevel,true)</onclick>
-				<onclick>ActivateWindow(appearancesettings)</onclick>
-			</control>
-
-		</control>
-
-		<!-- More list indicator -->
-		<control type="image">
-			<left>442</left>
-			<top>248</top>
-			<width>20</width>
-			<height>60</height>
-			<colordiffuse>ColorFO</colordiffuse>
-			<texture border="6,1,8,1">common/ScrollBackground.png</texture>
-			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(8000).HasFocus + !Control.HasFocus(20)">Conditional</animation>
-			<animation effect="fade" start="100" end="50" time="0" condition="Control.HasFocus(20)">Conditional</animation>
-		</control>
-
 	</controls>
-
 </window>

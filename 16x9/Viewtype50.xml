@@ -111,7 +111,7 @@
 				<top>-4</top>
 				<width>40</width>
 				<height>4</height>
-				<texture colordiffuse="ColorNF">common/white.png</texture>
+				<texture colordiffuse="ColorSelected">common/white.png</texture>
 				<visible>Container(50).HasPrevious</visible>
 			</control>
 			<!-- List -->
@@ -208,7 +208,7 @@
 				<bottom>156</bottom>
 				<width>40</width>
 				<height>4</height>
-				<texture colordiffuse="ColorNF">common/white.png</texture>
+				<texture colordiffuse="ColorSelected">common/white.png</texture>
 				<visible>Container(50).HasNext</visible>
 			</control>
 			<!-- Scrollbar -->

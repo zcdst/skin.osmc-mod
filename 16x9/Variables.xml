@@ -285,14 +285,10 @@
 		<value condition="Player.Rewinding32x">[B]x32[/B]</value>
 	</variable>
 
-	<variable name="SettingButtonFade">
-		<value condition="ControlGroup(5).HasFocus">ColorDetails</value>
-		<value>ColorHeading</value>
-	</variable>
-
-	<variable name="MoreButtonFade">
-		<value condition="ControlGroup(8000).HasFocus">ColorFO</value>
-		<value>ColorHeading</value>
+	<variable name="SettingButtonColor">
+		<value condition="Control.HasFocus(20)">ColorNF</value>
+		<value condition="!ControlGroup(5).HasFocus">ColorFO</value>
+		<value>ColorSelected</value>
 	</variable>
 
 	<variable name="SkinSettingButton10">

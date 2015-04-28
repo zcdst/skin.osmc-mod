@@ -135,7 +135,7 @@
 					<visible>Library.HasContent(Music)</visible>
 				</control>
 				<!-- Settings -->
-				<control type="button" id="93">
+				<control type="button" id="94">
 					<include>OptionButtons</include>
 					<label>5</label>
 					<onclick>SetFocus(50)</onclick>

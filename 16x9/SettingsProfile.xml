@@ -206,7 +206,7 @@
 				<font>Small</font>
 				<textcolor>ColorHeading</textcolor>
 				<focusedcolor>ColorFO</focusedcolor>
-				<colordisabled>ColorDetails</colordisabled>
+				<colordisabled>ColorDisabled</colordisabled>
 				<label>20096</label>
 			</control>
 
@@ -217,8 +217,8 @@
 				<font>Small</font>
 				<textcolor>ColorHeading</textcolor>
 				<focusedcolor>ColorFO</focusedcolor>
-				<colorinvalid>ColorDetails</colorinvalid>
-				<colordisabled>ColorDetails</colordisabled>
+				<colorinvalid>ColorInvalid</colorinvalid>
+				<colordisabled>ColorDisabled</colordisabled>
 				<label>33084</label>
 				<enable>!System.HasLoginScreen</enable>
 			</control>

@@ -51,16 +51,9 @@
 	<include name="DialogBackgroundImage">
 		<control type="image">
 			<include>FullscreenDimensions</include>
-			<texture colordiffuse="DialogBackgroundColor">common/white.png</texture>
-		</control>
-	</include>
-	<!-- Dialog fade background image -->
-	<include name="DialogFadeBackgroundImage">
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture colordiffuse="44000000">dialogs/DialogTextBackground.png</texture>
-			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<texture colordiffuse="WindowBackgroundColor">common/white.png</texture>
+			<animation effect="fade" start="0" end="70" time="200">WindowOpen</animation>
+			<animation effect="fade" start="70" end="0" time="200">WindowClose</animation>
 		</control>
 	</include>
 	<!-- Options background image -->
