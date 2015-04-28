@@ -97,7 +97,6 @@
 		<value condition="[Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles)]">$LOCALIZE[2]$INFO[Container.FolderName,: ]</value>
 		<value condition="Window.IsVisible(pictures)">$LOCALIZE[1]$INFO[Container.FolderName,: ]</value>
 		<value condition="Window.IsVisible(programs)">$LOCALIZE[0]$INFO[Container.FolderName,: ]</value>
-		<value condition="Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml)">$LOCALIZE[5]</value>
 		<value condition="Window.IsVisible(skinsettings)">$LOCALIZE[20077]</value>
 		<value condition="Window.IsVisible(systeminfo)">$LOCALIZE[130]</value>
 		<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[24001]</value>
@@ -106,6 +105,16 @@
 		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(videoplaylist)">$LOCALIZE[20012]</value>
 		<value condition="Window.IsVisible(musicplaylist)">$LOCALIZE[20011]</value>
+		<value condition="Window.IsVisible(settings)">$LOCALIZE[5]</value>
+		<value condition="Window.IsVisible(AppearanceSettings)">$LOCALIZE[480]</value>
+		<value condition="Window.IsVisible(VideosSettings)">$LOCALIZE[157]</value>
+		<value condition="Window.IsVisible(PVRSettings)">$LOCALIZE[19020]</value>
+		<value condition="Window.IsVisible(MusicSettings)">$LOCALIZE[2]</value>
+		<value condition="Window.IsVisible(PicturesSettings)">$LOCALIZE[1]</value>
+		<value condition="Window.IsVisible(WeatherSettings)">$LOCALIZE[8]</value>
+		<value condition="Window.IsVisible(ServiceSettings)">$LOCALIZE[14036]</value>
+		<value condition="Window.IsVisible(SystemSettings)">$LOCALIZE[13000]</value>
+		<value condition="Window.IsVisible(SettingsProfile)">$LOCALIZE[13200]</value>
 	</variable>
 
 	<variable name="NowPlayingVideoImage">
