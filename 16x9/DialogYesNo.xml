@@ -10,33 +10,30 @@
 			<include>DialogAnimation</include>
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
-			<width>720</width>
-			<height>360</height>
+			<width>800</width>
+			<height>290</height>
 			<!-- Background -->
 			<control type="image">
 				<centerleft>50%</centerleft>
-				<width>720</width>
-				<height>360</height>
-				<texture border="0,63,0,51">dialogs/DialogBackground2.png</texture>
+				<width>100%</width>
+				<height>100%</height>
+				<texture>dialogs/DialogBackground.png</texture>
 			</control>
 			<!-- Heading -->
 			<control type="label" id="1">
-				<centerleft>50%</centerleft>
+				<left>20</left>
 				<width>95%</width>
-				<height>58</height>
-				<align>center</align>
-				<font>Med</font>
+				<height>68</height>
+				<font>Large</font>
 				<textcolor>ColorHeading</textcolor>
 			</control>
 			<!-- Details -->
 			<control type="textbox" id="9">
 				<centerleft>50%</centerleft>
-				<top>96</top>
+				<top>76</top>
 				<width>95%</width>
-				<height>182</height>
-				<align>center</align>
+				<height>146</height>
 				<font>XSmall</font>
-				<autoscroll>False</autoscroll>
 				<textcolor>ColorDetails</textcolor>
 			</control>
 			<!-- Button grouplist -->
@@ -44,7 +41,7 @@
 				<centerleft>50%</centerleft>
 				<bottom>0</bottom>
 				<width>100%</width>
-				<height>52</height>
+				<height>68</height>
 				<itemgap>0</itemgap>
 				<onleft>noop</onleft>
 				<onright>noop</onright>
@@ -55,22 +52,22 @@
 				<!-- No -->
 				<control type="button" id="10">
 					<width>360</width>
-					<height>52</height>
+					<height>68</height>
 					<align>center</align>
 					<onleft>noop</onleft>
 					<onright>11</onright>
 					<label>106</label>
-					<font>Small</font>
+					<font>Med</font>
 				</control>
 				<!-- Yes -->
 				<control type="button" id="11">
 					<width>360</width>
-					<height>52</height>
+					<height>68</height>
 					<align>center</align>
 					<onleft>10</onleft>
 					<onright>noop</onright>
 					<label>107</label>
-					<font>Small</font>
+					<font>Med</font>
 				</control>
 			</control>
 		</control>
