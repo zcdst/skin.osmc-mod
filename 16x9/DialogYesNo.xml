@@ -49,6 +49,7 @@
 				<onright>noop</onright>
 				<onup>noop</onup>
 				<ondown>noop</ondown>
+				<align>center</align>
 				<defaultcontrol>10</defaultcontrol>
 				<orientation>horizontal</orientation>
 				<!-- No -->
