@@ -175,7 +175,7 @@
 			<control type="progress" id="1">
 				<left>300</left>
 				<top>20</top>
-				<width>870</width>
+				<width>865</width>
 				<height>20</height>
 				<info>Player.Progress</info>
 				<texturebg border="2">osd/OSDProgressBack.png</texturebg>
@@ -189,7 +189,7 @@
 			<control type="progress" id="1">
 				<left>300</left>
 				<top>20</top>
-				<width>870</width>
+				<width>865</width>
 				<height>20</height>
 				<info>Player.ProgressCache</info>
 				<texturebg colordiffuse="00ffffff" border="2">osd/OSDProgressBack.png</texturebg>
